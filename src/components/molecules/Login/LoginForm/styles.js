@@ -12,7 +12,7 @@ export const LoginWrapp=styled.div`
     display: block;
     margin-left: auto;
     margin-right: auto ;
-    @media (max-width: 768px) { 
+    @media (max-width: 40em) { 
         width:296px;    
      }
  

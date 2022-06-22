@@ -5,7 +5,7 @@ export const Img= styled.img`
 margin-left: auto;
 margin-right: auto;
 display: block;
-@media (max-width: 575.8px) {
+@media (max-width: 40em) {
     max-width: 112px;
     margin-left: 0;
 margin-right: 0;
@@ -27,7 +27,7 @@ color: #494F66;
 ${space}
 `
 Pexclamation.defaultProps={
-  marginTop:['30px','24px']
+  marginTop:['40px','24px']
 }
 export const H1= styled.h1` 
 font-family: 'Lato';
@@ -42,7 +42,7 @@ letter-spacing: -0.2px;
 /* Gray_1_Títulos */
 
 color: #494F66;
-@media (max-width: 576px) {
+@media (max-width: 40em) {
     font-size: 28px;
     line-height: 36px;  
     letter-spacing: -0.6px;
@@ -58,7 +58,7 @@ line-height: 48px;
 display: inline;
 margin-left: auto;
 margin-right: auto;
-@media (max-width: 576px) {
+@media (max-width: 40em) {
     font-size: 28px;
     line-height: 36px;  
     letter-spacing: -0.6px;
@@ -86,7 +86,7 @@ align-items: center;
 /* Gray_2_Paragraph */
 
 color: #676F8F;
-@media (max-width: 576px) { 
+@media (max-width: 40em) { 
         margin-top:12px;  
      }
 `

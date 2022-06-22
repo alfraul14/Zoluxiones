@@ -33,6 +33,13 @@ export const Span = styled('span')(
     display:'flex',
     alignItems:'center',
     textAlign:'right',
-    
-   
+       
   }
+  export const ContactPhoneMb=styled.div`
+        display:none;
+        z-index: 1;
+        @media (max-width:40em) { 
+        display: flex;    
+     }
+
+    `

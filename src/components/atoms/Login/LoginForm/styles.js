@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { layout } from 'styled-system'
 
 export const InputField= styled.div`
      width: 100%;
@@ -192,11 +193,11 @@ border-radius: 8px;
     transition: all .3s ease-in-out;
     min-width: 140px;
     outline: 0;
-    box-shadow: none;  
-    @media (max-width: 768px) { 
+    box-shadow: none;    
+   
+    @media screen and (max-width: 40em) {
         width: 100%;    
-     }
-    
+     }   
 
     `
 export const Error=styled.span`

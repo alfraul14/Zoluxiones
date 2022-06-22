@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const LoginImgContainer = styled.div`
     max-width: 536px;
     
-    @media (max-width: 576px) {
+    @media (max-width: 40em) {
         display: none;
   }
 `
@@ -16,10 +16,9 @@ export const LoginAuto = styled.div`
 `
 
 export const LoginImgContainerMb = styled.div`
-    width: 100%;
-    max-width:576px;
+    width: 100%;    
     display: flex;
-    @media (min-width: 575.8px) {
+    @media (min-width: 40em) {
         display: none;
   }
 
