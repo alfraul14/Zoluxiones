@@ -1,5 +1,6 @@
 import React from 'react';
-import { Login } from './components/pages/Login';
+import { ArmaTuPlan } from './components/pages/ArmaTuPlan/ArmaTuPlan';
+//import { Login } from './components/pages/Login';
 import MyThemeComponent from './components/providers/MythemeProvider';
  
 
@@ -7,8 +8,9 @@ import MyThemeComponent from './components/providers/MythemeProvider';
 function App() {
   return (
   < MyThemeComponent>
-     <Login></Login>
+     <ArmaTuPlan></ArmaTuPlan>
   </MyThemeComponent>
+  
   );
 }
 

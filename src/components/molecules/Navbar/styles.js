@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { layout } from 'styled-system'
-import { color,variant,typography,flexbox   } from 'styled-system'
+import { color,variant,typography,flexbox,layout  } from 'styled-system'
 export const Svg= styled.svg`
 font-weight: 400;
 font-size: 14px;
@@ -24,6 +23,7 @@ export const Span = styled('span')(
     color,
     typography,
     flexbox,
+    layout,
     variant({
       prop: 'variant',
       scale: 'text',
@@ -33,6 +33,7 @@ export const Span = styled('span')(
     display:'flex',
     alignItems:'center',
     textAlign:'right',
+    letterSpacing:'0.2px'
        
   }
   export const ContactPhoneMb=styled.div`

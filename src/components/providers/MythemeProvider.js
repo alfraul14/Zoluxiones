@@ -25,7 +25,7 @@ export const theme = {
       fontWeight: 300,
       fontSize: '12px',
       lineHeight: '20px',      
-      letterSpacing:' 0.2px',
+      
     }  
   },
 }

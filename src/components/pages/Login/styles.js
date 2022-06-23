@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import {border} from 'styled-system'
 
-
-export const Container = styled.div`
+export const ContainerNavbar = styled.div`
     width: 100%;  
     height :64px ;
+    ${border}
     @media (max-width: 40em) {
         height: 56px;
   }

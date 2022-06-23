@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {space} from 'styled-system'
+import {space,layout,typography } from 'styled-system'
 
 export const Img= styled.img` 
 margin-left: auto;
@@ -33,27 +33,25 @@ export const H1= styled.h1`
 font-family: 'Lato';
 font-style: normal;
 font-weight: 400;
-font-size: 36px;
 line-height: 48px;
-/* or 133% */
 display:inline;
 letter-spacing: -0.2px;
-
-/* Gray_1_Títulos */
-
 color: #494F66;
+${layout}
+${typography} 
 @media (max-width: 40em) {
-    font-size: 28px;
+   font-size: 28px;
     line-height: 36px;  
     letter-spacing: -0.6px;
-
   }
 `
+H1.defaultProps={
+  fontSize:' 36px',
+}
 export const H1Red= styled.b` 
 font-family: 'Lato';
 font-style: normal;
 font-weight: 400;
-font-size: 36px;
 line-height: 48px;
 display: inline;
 margin-left: auto;
@@ -71,6 +69,9 @@ letter-spacing: -0.2px;
 
 color: red;
 `
+H1Red.defaultProps={
+  fontSize:' 36px',
+}
 export const PText= styled.p` 
     font-family: 'Roboto';
 font-style: normal;
