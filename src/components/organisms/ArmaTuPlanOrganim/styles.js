@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { typography,color,space,layout,border } from 'styled-system'
+import { flexbox,typography,color,space,layout,border } from 'styled-system'
 
 export const Wrapper= styled.div`
     position: relative;
@@ -9,10 +9,12 @@ export const Wrapper= styled.div`
     margin-right    :auto ;
     margin-top:116px;
     display: flex; 
+    ${flexbox }
     @media (max-width: 40em) {
         margin-top:108px;
         flex-direction: column;
   }
+  
     
     
 `

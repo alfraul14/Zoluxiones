@@ -38,6 +38,7 @@ display:inline;
 letter-spacing: -0.2px;
 color: #494F66;
 ${layout}
+${space}
 ${typography} 
 @media (max-width: 40em) {
    font-size: 28px;
@@ -61,6 +62,7 @@ margin-right: auto;
     line-height: 36px;  
     letter-spacing: -0.6px;
   }
+  ${typography}
 /* or 133% */
 
 letter-spacing: -0.2px;
