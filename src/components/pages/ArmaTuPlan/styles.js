@@ -8,8 +8,9 @@ export const ContainerBg= styled.div`
     height: 100%;
     background-color:  #F7F8FC;
     z-index: 1;
-    @media (max-width:40em) { 
-        top:57px;    
+    @media (max-width:52em) { 
+        top:57px;
+        display    : none;
      }
 `
 

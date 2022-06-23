@@ -2,8 +2,15 @@ import styled from 'styled-components'
 import {border} from 'styled-system'
 
 export const ContainerNavbar = styled.div`
-    width: 100%;  
-    height :64px ;
+     top: 0px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    height: 64px;
+    z-index: 5;
+    border-bottom: 1px solid #E4E8F7;
+
+
     ${border}
     @media (max-width: 40em) {
         height: 56px;

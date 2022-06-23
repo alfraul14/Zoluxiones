@@ -12,7 +12,7 @@ export const ArmaTuPlan = () => {
            <ArmatuPlanOrganism/>    
        
 
-        <ContainerBg/>
+             <ContainerBg/>
                        
                    
         </>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { typography,color,space } from 'styled-system'
+import { typography,color,space,layout,border } from 'styled-system'
 
 export const Wrapper= styled.div`
     position: relative;
@@ -7,23 +7,46 @@ export const Wrapper= styled.div`
     max-width:1184px;
     margin-left    :auto ;
     margin-right    :auto ;
-    margin-top:52px;
+    margin-top:116px;
     display: flex; 
+    @media (max-width: 40em) {
+        margin-top:108px;
+        flex-direction: column;
+  }
     
     
 `
 export const WrapperSteps= styled.div`
    width: 320px;
+   @media (max-width: 40em) {
+        width:100%
+  }
+    
+`
+export const WrapperText= styled.div`
+  ${layout}
+  ${space}
     
 `
 export const WrapperBody= styled.div`
    margin-left: 96px;
-   width: 864px;  
+   max-width: 864px;  
    display: flex;  
+   @media (max-width: 40em) {
+    flex-direction: column;
+    margin-left: 32px;
+    margin-right: 32px;
+        
+  }
    
 `
 export const WrapperBodyImportant= styled.div`
-   width: 384px;   
+   width: 384px;
+   @media (max-width: 40em) {
+        width: 100%;
+        
+  }
+      
     
 `
 export const PReusable= styled.p`
@@ -34,6 +57,7 @@ font-weight: 400;
 ${typography}
 ${color}
 ${space}
+${layout}
 `
 PReusable.defaultProps={
     lineHeight:'28px',
@@ -61,6 +85,11 @@ export const BoxBoyLic= styled.div`
     margin-top  :44px ;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 40em) {
+        width: 100%;
+        height: 148px;
+        
+  }
     
   
 `
@@ -70,7 +99,11 @@ export const BoxSum= styled.div`
    margin-right: 32px;
    display:flex;
    justify-content: space-between;
-    
+   @media (max-width: 40em) {
+       width:100%;
+       flex-direction: column;
+        
+  }
 `
 export const BoxSumText= styled.div`
      
@@ -81,6 +114,12 @@ height: 56px;
 border: 1px solid #C5CBE0;
 border-radius: 8px;
 display: flex;
+@media (max-width: 40em) {
+       width:100%;
+
+  }
+
+
 `
 export const BoxSumTextMinMax= styled.div`
     display: flex;
@@ -98,6 +137,12 @@ align-content: center;
    
 flex-wrap: wrap;
 justify-content: space-around;
+@media (max-width: 40em) {
+       width:100%;
+
+  }
+
+
 `
 export const BoxSumButtomTrue= styled.div`
 background-color: white;
@@ -106,12 +151,18 @@ display: flex;
 align-content: center;   
 flex-wrap: wrap;
 cursor: pointer;
+
 `
 export const Line= styled.div`
- border-bottom:solid 1px #E4E8F7;
+ 
 
  ${space}
+ ${layout}
+ ${border}
  `
+ Line.defaultProps={
+  borderBottom:'solid 1px #E4E8F7'
+ }
  export const H2Reusable= styled.h2`
     font-family: 'Lato';
     font-style: normal;
@@ -123,6 +174,9 @@ export const Line= styled.div`
  `
   export const NavCoberture= styled.div` 
   display: flex;
+  width: 100%;
+    /* flex-direction: row; */
+    justify-content: center;
       
 `
 export const H3Reusable= styled.h3`
@@ -183,19 +237,29 @@ export const TextWrapper= styled.div`
     margin-top: 16px;
 `
 export const WrapperMont= styled.div`
+
     width: 320px;
+    @media (max-width: 768px) { 
+        display: none;    
+     }
 `
 export const WrapperMontData= styled.div`
     width: 224px;
     margin-left: 30%;
     margin-right: auto;
+    @media (max-width: 40em) {
+        display:none;
+        
+  }
+    
 `
 export const Button=styled.button`
+
     background: #EF3340;
     border-radius: 8px;
     width: 192px;
     color: white;
-    margin-top: 32px;
+
     //height: 48px;
     font-size: 14px;
     height: 48px;
@@ -212,9 +276,27 @@ export const Button=styled.button`
     transition: all .3s ease-in-out;
     min-width: 140px;
     outline: 0;
-    box-shadow: none;    
-   
+    box-shadow: none;  
+    ${space}  
  
+
+    `
+    Button.defaultProps={
+      marginTop: '32px',
+      marginLeft: '30%',
+      marginRight: 'auto',
+    }
+    export  const WrapperButton=styled.div`
+    margin-top: 16px;
+    margin-bottom: 16px;
+     display: none;
+      background: #FFFFFF;
+      justify-content: space-around;
+      @media (max-width:40em) { 
+        display: flex;   
+     } 
+/* Shadow 1 */
+
 
     `
 

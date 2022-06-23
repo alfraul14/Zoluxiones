@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {color} from 'styled-system'
+import {color,layout} from 'styled-system'
 export const StepWrap= styled.div`
 display:flex;
 position:relative;
@@ -22,9 +22,13 @@ position:relative;
 align-items: initial;
 margin-bottom: 24px;
 `
+export const StepsContainer=styled.div`
+width: 100%;
+padding: 16px 0;
+    ${layout}
+`
 
-export const Span= styled.span`
-    background: transparent;
+export const Span= styled.span`  
    
     border: 1px solid ;
     margin-right: 16px;
@@ -48,13 +52,31 @@ Span.defaultProps={
     bg:'#F7F8FC'
 }
 export const PText =styled.p`
-   margin: 0;
+     margin: 0;
     color: #494F66;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.2px;
     font-weight: normal;
     font-family: 'Lato', Arial, sans-serif;
-    font-weight: bold;
-    margin-bottom: 4px;
+`
+export const WrapperMobile =styled.div`
+display: flex;
+margin: 0px 32px;
+
+`
+export const  WrapperPorcentaje =styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+`
+export const Porcentaje =styled.div`
+width:100%;
+height:7px;
+
+
+background: #6769FF;
+border-radius: 20px;
 `

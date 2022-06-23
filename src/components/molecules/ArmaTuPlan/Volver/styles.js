@@ -8,6 +8,10 @@ export const Svg= styled.svg`
 export const WrapperVolver= styled.div`
     display: flex;
     margin-bottom: 28px;
+    @media (max-width: 40em) {
+      display: none;
+
+  }
   
 `
 
