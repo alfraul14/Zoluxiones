@@ -1,6 +1,6 @@
 import React from "react";
 import {InputField,Select,InputLabel,Label,InputDoc, InputContainer,Error} from './styles'
-export  const LoginSelect = ()=>{
+export  const LoginSelect = ({dni})=>{
     return(
         <InputContainer>
         <InputField>
@@ -8,12 +8,19 @@ export  const LoginSelect = ()=>{
                 <option value="volvo">DNI</option>
                 <option value="saab">C.E.</option>
             </Select>
-            <InputLabel>
-                <InputDoc />
-                <Label>Nro. de doc</Label>
+            <InputLabel            
+            >
+                <InputDoc
+                autoFocus
+                 type='number'
+                 name='dni'
+                 required
+                     {...dni}
+                />
+                <Label mayor={dni.value}>Nro. de doc</Label>
             </InputLabel>
         </InputField>
-        <Error>*Ingrese un número de documento válido</Error>
+        {dni.error&&  <Error>*Ingrese un número de documento válido</Error>}
         </InputContainer>
     )
 

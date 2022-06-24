@@ -20,7 +20,7 @@ export const Background = styled.div`
     background: url('/images/fondo.svg') right top  no-repeat #ECF0FF;
     background-size: cover;
     position: absolute;
-    height: 700px;
+    height: 100%;
     z-index: 0;
     width: 39.55%;
     top: 0;

@@ -1,13 +1,19 @@
 import React from "react";
 import {Input, InputLabel, Label,InputContainer,Error} from './styles'
-export  const LoginLic = ()=>{
+export  const LoginLic = ({lic})=>{
+   
     return(
         <InputContainer>
             <InputLabel>
-                <Input  />   
-                <Label>Placa</Label>     
+                <Input 
+                type='text'
+                name='placa'
+                required
+                    {...lic}
+                 />   
+                <Label mayor={lic.value}>Placa</Label>     
             </InputLabel>
-            <Error>*Ingrese la placa</Error>
+            {lic.error&&  <Error>*Ingrese una placa válida</Error>}
 
         </InputContainer>
     )

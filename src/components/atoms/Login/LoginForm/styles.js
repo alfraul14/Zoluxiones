@@ -1,11 +1,14 @@
 import styled from 'styled-components'
-import { layout } from 'styled-system'
+import { border } from 'styled-system'
 
 export const InputField= styled.div`
      width: 100%;
     display:flex;
     height:56px;`
-    export const LabelBg= styled.label`
+
+
+
+export const LabelBg= styled.label`
     display: inline-block;
     cursor: pointer;
     font-family: "Roboto",sans-serif;
@@ -14,8 +17,32 @@ export const InputField= styled.div`
     line-height: 20px;
     letter-spacing: 0.2px;
     color: #676f8f;
+
     &:before {
-    background-color: #92d66f;
+        content: "";
+    border: 1px solid #d4d5e8;
+    border-radius: 5px;
+    margin-right: 10px;
+    vertical-align: bottom;
+    /* color: transparent; */
+    transition: .2s;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 8px;
+    }
+   `
+  
+export const FalsoCheck= styled.div`
+
+    display: flex;
+    align-items: flex-start ;`
+
+export const InputCheckbox=styled.input`
+display:none;
+&:checked+${FalsoCheck}>${LabelBg}:before{
+  background-image: url('images/check.svg');
+  background-color: #92d66f;
     border-color: #92d66f;
     color: #fff;
     font-size: 8px;
@@ -23,7 +50,7 @@ export const InputField= styled.div`
     background-size: 70%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url('images/check.svg');
+    
     content: "";
     border: 1px solid #d4d5e8;
     border-radius: 5px;
@@ -32,12 +59,8 @@ export const InputField= styled.div`
     width: 18px;
     height: 18px;
     display: inline-block;
-    }
-   `
-export const FalsoCheck= styled.div`
-
-    display: flex;
-    align-items: flex-start ;`
+}
+`
 export const ContainerCheckbox= styled.div`
 
    display:flex;
@@ -71,12 +94,12 @@ letter-spacing: -0.2px;
 
 color: #494F66;
 `
-export const InputCheckbox=styled.input`
-display:none`
+
 
 export const Input=styled.input`
+   // border: ${p => (p.focus ?'1px solid #6f7dff' : '1px solid #d4d5e8')};
     color: #494f66;
-    border: solid 1px #d4d5e8;
+    border:1px solid  #d4d5e8;
     width: 100%;
     height: 56px;
     padding-left: 16px;
@@ -92,7 +115,13 @@ export const Input=styled.input`
     -webkit-text-fill-color: #494f66;
     -webkit-appearance: none;
     appearance: none;
-    text-transform: capitalize;`
+    text-transform: capitalize;
+    &:focus{
+        border:1px solid   #6f7dff;
+    }
+  `
+    
+ 
 export const InputDoc=styled.input`
     color: #494f66;
     border: solid 1px #d4d5e8;
@@ -112,6 +141,9 @@ export const InputDoc=styled.input`
     -webkit-appearance: none;
     appearance: none;
     text-transform: capitalize;
+    &:focus{
+        border:1px solid   #6f7dff;
+    }
 `
 
 export const Select=styled.select`
@@ -158,7 +190,10 @@ font-weight: normal;
     color: #676f8f;
 `
 export const Label=styled.label`
-color: #a3abcc;
+  ${p => (p.mayor !=='' && p.mayor !=='undefined'?'transform: translateY(-14px) scale(1);font-family: "Roboto",sans-serif;    font-size: 12px !important' : '')};
+
+
+    color: #a3abcc;
     position: absolute;
     bottom: 32%;
     left: 16px;
@@ -170,6 +205,13 @@ color: #a3abcc;
     -webkit-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
     text-align: initial;
+    
+    ${Input}:focus + & {
+    transform: translateY(-14px) scale(1);
+    font-family: "Roboto",sans-serif;
+    font-size: 12px;
+    }
+    
 
 `
 

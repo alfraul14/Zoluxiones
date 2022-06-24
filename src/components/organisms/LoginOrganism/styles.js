@@ -8,7 +8,7 @@ position:relative;
 flex-wrap: nowrap;
 flex-direction:row;
 max-width: 1184px;
-    margin:0 ;
+    margin-top:98px ;
     margin-left: auto;
     margin-right: auto;
 

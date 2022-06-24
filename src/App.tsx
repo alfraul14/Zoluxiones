@@ -3,7 +3,6 @@ import React from 'react';
 import { Gracias } from './components/pages/Gracias/Gracias';
 //import { Login } from './components/pages/Login';
 import MyThemeComponent from './components/providers/MythemeProvider';
- 
 
 
 function App() {

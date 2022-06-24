@@ -1,15 +1,25 @@
 import React from "react";
 import {Input,InputContainer,InputLabel,Label,Error} from './styles'
-export  const LoginCel = ()=>{
+export  const LoginCel = ({cel})=>{
+   // console.log(cel.value)
+  
+
+   
+
     return(
         <InputContainer>
             <InputLabel>
-                <Input /> 
-                <Label>
+                <Input {...cel}
+                 required 
+                 type='number'
+                 name='celular'
+                 
+                  /> 
+                <Label mayor={cel.value}>
                     Celular                
                 </Label>       
             </InputLabel>
-            <Error>*Ingrese un número de celular válido</Error>
+           {cel.error&& <Error>*Ingrese un número de celular válido</Error>}
 
         </InputContainer>
     )
