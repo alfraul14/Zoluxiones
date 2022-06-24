@@ -1,6 +1,6 @@
 
 import { UserContext } from './UserContext';
-import {formularioInterface, User} from '../../types/types'
+import {formularioInterface, montoInterface, User} from '../../types/types'
 import { useState } from 'react';
 
 
@@ -17,12 +17,16 @@ const FormularioInicial:formularioInterface={
     dni: 0,
     cel: 0,    
 }
+const monto:montoInterface={
+    monto:0  
+}
 
 interface props {
     children: JSX.Element | JSX.Element[]
 }
 
 export const UserProvider = ({ children }: props ) => {
+    const [montoState, setMontoState] =useState(monto);
     const [userState, setDatauser] =useState(userInicial);
     const [formulario,setFormulario]=useState(FormularioInicial);
   
@@ -32,11 +36,14 @@ export const UserProvider = ({ children }: props ) => {
     const updateFormulario = (formData:formularioInterface) =>{
         setFormulario({...formulario,...formData})
     }
+    const updateMonto = (costo:montoInterface) =>{
+        setMontoState({...montoState,...costo})
+    }
 
 
     return (
         <UserContext.Provider 
-         value={{formulario,updateFormulario,userState, updateUser}}>
+         value={{formulario,updateFormulario,userState, updateUser,montoState,updateMonto}}>
             { children }
         </UserContext.Provider>
     )

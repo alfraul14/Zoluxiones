@@ -4,27 +4,43 @@ import { Input, Img,Label, ImgContainer, PlusMinContainer, PlussMin, Switch, Wra
 type Props={
     src1:string,
     text:string,
-    src2:string
+    src2:string,
+    ActualizarMonto:(precio:number,operador:boolean)=>void,
+    precio:number
+    cobertura:{
+        adquirido:any,
+        updateAdquirido:()=>void
+        oferta:string
+
+    }
+
 }
-export const Cobertura = ({src1,text,src2}:Props) => {
-    return (
-        
-        <Wrapper>
-            
+export const Cobertura = ({src1,text,src2,ActualizarMonto,precio,cobertura}:Props) => {
+    const {adquirido,updateAdquirido,oferta}=cobertura
+    const handleClick = () =>{
+        if(oferta==='noinicializado'){
+            ActualizarMonto(precio,adquirido)
+            updateAdquirido()
+      }
+
+   
+    }
+    return (       
+        <Wrapper>            
             <img src={src1} alt='cobertura rimac'/>
             <PlusMinContainer>
             <H2Reusable > {text}</H2Reusable>
-            <PlussMin display={['none','flex']}>
-                 <Img mr={'12px'} src={src2} alt='cobertura rimac'/>
-                 <PReusable fontSize={'12px'}   color={'#6F7DFF'}>   QUITAR</PReusable>
+            <PlussMin onClick={()=>handleClick()} display={['none','flex']}>
+                 <Img mr={'12px'} src={adquirido ?'/images/menos.svg':'/images/add.svg'} alt='cobertura rimac'/>
+                 <PReusable fontSize={'12px'}   color={'#6F7DFF'}> {adquirido ?'Quitar':'Agregar'}</PReusable>
 
                  
             </PlussMin>
             </PlusMinContainer>
-            <ImgContainer  display={['none','block']}src="/images/up.svg" alt='desplegar'/>
+            <ImgContainer  display={['none','block']}src={src2} alt='desplegar'/>
             <InputWrapper display={['block','none']}>
                 <Label >            
-                <Input  type="checkbox" />
+                <Input  type="checkbox" onClick={()=>handleClick()}  />
                 <Switch />
                 </Label>
             </InputWrapper>

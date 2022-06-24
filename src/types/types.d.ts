@@ -9,3 +9,6 @@ export interface formularioInterface{
     dni:number
     cel: number   
 }
+export interface montoInterface{
+    monto: number   
+}

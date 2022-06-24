@@ -12,6 +12,7 @@ import { UserContext } from "../../../context/UserContext";
 import { useNavigate  } from "react-router-dom"
 
 export const LoginForm = () =>{
+    
     let navigate = useNavigate ();
     const {updateHookUser} =UseUpdateUser()
     const {updateFormulario} =useContext(UserContext)
@@ -33,6 +34,8 @@ export const LoginForm = () =>{
             updateFormulario(formData)
             navigate("armatuplan")     
         }
+      
+        
 
     return(
 

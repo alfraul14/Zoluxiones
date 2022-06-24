@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { border } from 'styled-system'
 
 export const InputField= styled.div`
      width: 100%;
