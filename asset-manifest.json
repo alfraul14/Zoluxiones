@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Zoluxiones/static/js/main.1c7d6046.js",
-    "index.html": "/Zoluxiones/index.html",
-    "main.1c7d6046.js.map": "/Zoluxiones/static/js/main.1c7d6046.js.map"
+    "main.js": "/static/js/main.65f1b7b4.js",
+    "index.html": "/index.html",
+    "main.65f1b7b4.js.map": "/static/js/main.65f1b7b4.js.map"
   },
   "entrypoints": [
-    "static/js/main.1c7d6046.js"
+    "static/js/main.65f1b7b4.js"
   ]
 }
