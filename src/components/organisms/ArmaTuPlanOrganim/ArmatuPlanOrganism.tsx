@@ -11,16 +11,21 @@ import {useVariarMonto} from '../../../hooks/useVariarMonto'
 import { useGetcar } from "../../../hooks/useGetCar"
 import { useContext } from "react"
 import { UserContext } from "../../context/UserContext"
+import { useNavigate } from "react-router-dom"
 export const ArmatuPlanOrganism = () => {
     const {año,modelo,marca,loading}=useGetcar()    
     const {formulario,userState,updateMonto} =useContext(UserContext)
-    
+    let navigate = useNavigate ();
     const [sumaAsegurada,setSumaAsegurada,refSumaAsegurada]=useState<number>(16000)
     const cobertura1=useVariarMonto()
     const cobertura2=useVariarMonto()
-    const cobertura3=useVariarMonto()
-    
+    const cobertura3=useVariarMonto()    
     const [monto,setMonto] = useState<number>(20)
+ 
+     const handleMonto = () =>{
+        updateMonto({monto})
+        navigate("/gracias")
+    }
 
 
     const ActualizarSumaAsegurada=(operacion:string)=>{
@@ -139,7 +144,7 @@ export const ArmatuPlanOrganism = () => {
                         </WrapperMontData>
                         
                             
-                            <Button onClick={()=>{updateMonto({monto})}} >LO QUIERO</Button>   
+                            <Button onClick={()=>{handleMonto()}} >LO QUIERO</Button>   
                           
                 </WrapperMont>                               
             </WrapperBody> 
@@ -147,7 +152,7 @@ export const ArmatuPlanOrganism = () => {
             <WrapperButton> 
                             
                             <PReusable display={['block','none']} marginTop={'10px'} lineHeight={'36px'}fontSize={'28px'}  letterSpacing={'-0.2px'} color={'#494F66'}>${monto},00 </PReusable>    
-                            <Button onClick={()=>{updateMonto({monto})}} marginRight={'0px'}marginLeft={'0px'}marginTop={'0px'}>LO QUIERO</Button>   
+                            <Button onClick={()=>{handleMonto()}} marginRight={'0px'}marginLeft={'0px'}marginTop={'0px'}>LO QUIERO</Button>   
              </WrapperButton>
 
          </Wrapper>

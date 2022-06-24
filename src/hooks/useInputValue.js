@@ -8,7 +8,7 @@ export const useInputValue = initialvalue => {
        
         if(e.target.name==='cxb'){
             setValuecxb(!valuecxb)
-            console.log(valuecxb)         }
+                    }
         setValue(e.target.value);
         if(e.target.name==='dni'){  
            if (e.target.value.length<8 | e.target.value.length>8)return  setError(true) }

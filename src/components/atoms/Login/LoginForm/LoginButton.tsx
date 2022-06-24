@@ -9,7 +9,7 @@ export  const LoginButton = ({handleSendForm}:Props)=>{
     return(
         
       
-        <Button type='submit' onClick={handleSendForm} >data</Button> 
+        <Button type='submit' onClick={handleSendForm} >    COTÍZALO</Button> 
     
     
     )

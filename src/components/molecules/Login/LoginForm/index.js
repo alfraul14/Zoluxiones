@@ -32,7 +32,7 @@ export const LoginForm = () =>{
         }  
             updateHookUser()  
             updateFormulario(formData)
-            navigate("armatuplan")     
+            navigate("/armatuplan")     
         }
       
         

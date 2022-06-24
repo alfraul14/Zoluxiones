@@ -7,7 +7,7 @@ const [focus,setFocus]=useState(false)
 }
 const handleBlur =()=>{
     setFocus(false)
-    console.log("blurrr")        
+        
 }
   return ({
     handleFocus, handleBlur, focus

@@ -1,7 +1,7 @@
 import React from "react";
 import {Input,InputContainer,InputLabel,Label,Error} from './styles'
 export  const LoginCel = ({cel})=>{
-   // console.log(cel.value)
+
   
 
    
